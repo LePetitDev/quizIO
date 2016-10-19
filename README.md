@@ -4,11 +4,12 @@ This project's purpose is to demonstrate the use of Socket.IO.
 How to Run
 ----------
 
-Download the latest installer for PostgreSQL. On a Mac, the installer will install the PostgreSQL database as well as a GUI application, PGAdmin, for creating databases, tables, and queries.
+Before starting, download the latest installer for PostgreSQL. On a Mac, the installer will install the PostgreSQL database as well as a GUI application, PGAdmin, for creating databases, tables, and queries.
 http://www.enterprisedb.com/products-services-training/pgdownload
 
-1. in PGAdmin, create a user, password, and a database. Take note of these and put them in the dbConnectionString method, which is found in controllers/Util.js.
-2. In PGAdmin, run the following queries in your database.
+1. Run npm install to get NodeJS dependencies.
+2. in PGAdmin, create a user, password, and a database. Take note of these and put them in the dbConnectionString method, which is found in controllers/Util.js.
+3. In PGAdmin, run the following queries in your database.
 ```
 CREATE TABLE questions (
   question_id serial primary key NOT NULL,
