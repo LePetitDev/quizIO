@@ -7,7 +7,7 @@ How to Run
 Before starting, download the latest installer for PostgreSQL. On a Mac, the installer will install the PostgreSQL database as well as a GUI application, PGAdmin, for creating databases, tables, and queries.
 http://www.enterprisedb.com/products-services-training/pgdownload
 
-1. Run npm install to get NodeJS dependencies.
+1. Run `npm install` to get NodeJS dependencies.
 2. in PGAdmin, create a user, password, and a database. Take note of these and put them in the dbConnectionString method, which is found in controllers/Util.js.
 3. In PGAdmin, run the following queries in your database.
 ```
@@ -35,7 +35,7 @@ insert into answers (question_id, answer, is_correct) values (1, 'True', true) r
 insert into answers (question_id, answer, is_correct) values (1, 'False', false) returning *;
 ```
 
-Then, to start the app, run `nodemon --harmony --watch app.js entrypoint.js`
+Then, to start the app, run `node --harmony --watch app.js entrypoint.js`
 
 Notes
 -----

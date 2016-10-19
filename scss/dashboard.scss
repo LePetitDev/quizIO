@@ -1,0 +1,244 @@
+@import 'meyer-reset';
+@import 'mixins';
+@import 'variables';
+
+html, body {
+  font-size: 1em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h3 {
+  color: $color-headline;
+  display: inline-block;
+  border-bottom: 3px dotted lighten($color-headline, 37.5%);
+  margin: $size-gutter auto;
+  @include rem(font-size, 20px);
+  @include rem(max-height, 43px);
+}
+
+#Gauge, #Line, #Pie, #People {
+  @include rem(min-height, 200px);
+  width: 100%;
+  text-align: center;
+  p {
+    margin: auto;
+  }
+  @include breakpoint($bp-tablet) {
+    min-height: 25vh;
+  }
+}
+
+#People {
+  @include breakpoint($bp-tablet) {
+    min-height: 53vh;
+  }
+  padding: $size-gutter;
+  width: 100%;
+}
+
+header {
+  .mdl-layout__header-row {
+    margin: 0 auto;
+  }
+}
+
+// React transitions
+.student-appear {
+  opacity: 0.01;
+  &.student-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }
+}
+.student-enter {
+  opacity: 0.01;
+  &.student-enter-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }
+}
+.student-leave {
+  opacity: 1;
+  &.student-leave-active {
+    opacity: 0.01;
+    transition: opacity .5s ease-in;
+  }
+}
+
+ul { 
+   list-style-type: none; 
+   list-style-position: inside; 
+  li {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    @include rem(font-size, 18px);
+    @include rem(margin-right, 20px);
+    width: 100%;
+    margin: 0 0 $size-gutter $size-gutter;
+    @include breakpoint($bp-tablet) {
+      width: 25%;
+      margin: 0 0 $size-gutter*2.5 0;
+    }
+    em {
+      font-style: normal;
+      font-weight: bold;
+      color: $color-pass;
+      @include rem(margin-left, $size-gutter * 3);
+      &.Fail {
+        color: $color-fail;
+      }
+    }
+  }
+  ul { 
+    @include rem(margin-left, 10px);
+    @include rem(margin-right, 10px);
+  }
+}
+
+// Override material-design-lite css.
+.mdl-layout__content {
+  background: $color-gray;
+}
+.mdl-layout__header {
+  box-shadow: none;
+}
+.mdl-layout-title {
+  color: darken($color-headline, 5%);
+  @include rem(font-size, 27px);
+}
+
+.mdl-layout__header-row {
+  padding: 0;
+  @include breakpoint($bp-tablet) {
+    @include rem(padding, 0 16px 0 72px);
+  }
+}
+
+.mdl-grid.demo-content {
+  padding-left: 0;
+  @include breakpoint($bp-tablet) {
+    @include rem(padding-left, 8px);
+  }
+}
+
+// Pie Chart
+.mdl-cell--3-col, .mdl-cell--3-col-phone.mdl-cell--3-col-phone {
+  width: 100%;
+  @include breakpoint($bp-tablet) {
+    width: calc(25% - 16px);
+  }
+}
+
+// Students List
+.mdl-cell--12-col {
+  padding: 0;
+  @include breakpoint($bp-tablet) {
+    @include rem(padding, 8px);
+  }
+}
+
+#Quiz {
+  text-align: center;
+  width: calc(100% - $size-gutter);
+  h4 {
+    text-align: left;
+    color: lighten(#000, 25%);
+    @include rem(padding, 10px);
+    @include rem(font-size, 13px);
+    @include breakpoint($bp-tablet) {
+      @include rem(font-size, 16px);
+    }
+    em {
+      float: right;
+    }
+  }
+  form {
+    font-family: georgia,"times new roman",times,serif;
+    @include rem(font-size, 16px);
+    @include rem(margin, 34px auto 0 auto);
+    @include rem(padding, $size-gutter);
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    @include breakpoint($bp-tablet) {
+      display: block;
+      width: auto;
+    }
+    h1 {
+      padding: $size-gutter;
+      color: $color-charcoal;
+      @include rem(font-size, 21px);
+      @include rem(margin-bottom, 21px);
+    }
+    b {
+      display: block;
+      font-weight: normal;
+      margin-top: $size-gutter;
+      @include rem(font-size, 13px);
+      color: $color-red;
+      opacity: 1;
+      transition: .4s opacity;
+      &.invis {
+        opacity: 0;
+      }
+    }
+    input {
+      border: 1px solid $color-gray;
+      @include rem(font-size, 16px);
+      @include rem(padding, 10px);
+      @include rem(border-radius, 5px);
+      box-shadow: inset 0px 1px 3px 0 rgba(0, 0, 0, 0.15);
+    }
+    #super {
+      @include rem(font-size, 10px);
+      vertical-align: +45%;
+    }
+    label:nth-of-type(2) {
+      @include rem(margin-left, 25px);
+    }
+    input[type=text] {
+      font-family: georgia,"times new roman",times,serif;
+      text-align: center;
+      width: 65%;
+      @include breakpoint($bp-tablet) {
+        width: auto;
+      }
+    }
+    input[type=radio] {
+      @include rem(margin, 0 10px 0 0);
+    }
+    button {
+      @include rem(border-radius, 4px);
+      color: black;
+      display: block;
+      line-height: 1;
+      @include rem(padding, 10px 30px);
+      @include rem(height, 32px);
+      transition: .4s all;
+      border: 0;
+      outline: none;
+      opacity: 1;
+      margin: $size-gutter auto;
+      @include rem(font-size, 14px);
+      background-color: $color-macmillan-blue;
+      &:hover, &:focus {
+        background-color: $color-macmillan-blue-hover;
+      }
+      &:active {
+        background-color: $color-macmillan-blue-active;
+      }
+    }
+    p {
+      @include rem(margin, 15px 0);
+      em {
+        color: lighten($color-black, 50%);
+        @include rem(margin-right, 10px);
+      }
+    }
+  }
+}

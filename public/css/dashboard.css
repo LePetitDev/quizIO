@@ -1,0 +1,325 @@
+/* line 6, /Users/i/Sites/macmillan/dryrun/scss/_meyer-reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* line 16, /Users/i/Sites/macmillan/dryrun/scss/_meyer-reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 19, /Users/i/Sites/macmillan/dryrun/scss/_meyer-reset.scss */
+body {
+  line-height: 1; }
+
+/* line 22, /Users/i/Sites/macmillan/dryrun/scss/_meyer-reset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 25, /Users/i/Sites/macmillan/dryrun/scss/_meyer-reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 29, /Users/i/Sites/macmillan/dryrun/scss/_meyer-reset.scss */
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+/* line 35, /Users/i/Sites/macmillan/dryrun/scss/_meyer-reset.scss */
+q:before, q:after {
+  content: "";
+  content: none; }
+
+/* line 40, /Users/i/Sites/macmillan/dryrun/scss/_meyer-reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 5, stdin */
+html, body {
+  font-size: 1em; }
+
+/* line 9, stdin */
+* {
+  box-sizing: border-box; }
+
+/* line 13, stdin */
+h3 {
+  color: #555;
+  display: inline-block;
+  border-bottom: 3px dotted #b5b5b5;
+  margin: 10px auto;
+  font-size: 20px;
+  font-size: 1.25rem;
+  max-height: 43px;
+  max-height: 2.6875rem; }
+
+/* line 22, stdin */
+#Gauge, #Line, #Pie, #People {
+  min-height: 200px;
+  min-height: 12.5rem;
+  width: 100%;
+  text-align: center; }
+  /* line 26, stdin */
+  #Gauge p, #Line p, #Pie p, #People p {
+    margin: auto; }
+  @media all and (min-width: 750px) {
+    /* line 22, stdin */
+    #Gauge, #Line, #Pie, #People {
+      min-height: 25vh; } }
+
+/* line 34, stdin */
+#People {
+  padding: 10px;
+  width: 100%; }
+  @media all and (min-width: 750px) {
+    /* line 34, stdin */
+    #People {
+      min-height: 53vh; } }
+
+/* line 43, stdin */
+header .mdl-layout__header-row {
+  margin: 0 auto; }
+
+/* line 49, stdin */
+.student-appear {
+  opacity: 0.01; }
+  /* line 51, stdin */
+  .student-appear.student-appear-active {
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-in;
+            transition: opacity 0.5s ease-in; }
+
+/* line 56, stdin */
+.student-enter {
+  opacity: 0.01; }
+  /* line 58, stdin */
+  .student-enter.student-enter-active {
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-in;
+            transition: opacity 0.5s ease-in; }
+
+/* line 63, stdin */
+.student-leave {
+  opacity: 1; }
+  /* line 65, stdin */
+  .student-leave.student-leave-active {
+    opacity: 0.01;
+    -webkit-transition: opacity 0.5s ease-in;
+            transition: opacity 0.5s ease-in; }
+
+/* line 71, stdin */
+ul {
+  list-style-type: none;
+  list-style-position: inside; }
+  /* line 74, stdin */
+  ul li {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    font-size: 1.125rem;
+    margin-right: 20px;
+    margin-right: 1.25rem;
+    width: 100%;
+    margin: 0 0 10px 10px; }
+    @media all and (min-width: 750px) {
+      /* line 74, stdin */
+      ul li {
+        width: 25%;
+        margin: 0 0 25px 0; } }
+    /* line 86, stdin */
+    ul li em {
+      font-style: normal;
+      font-weight: bold;
+      color: #c5ac2f;
+      margin-left: 30px;
+      margin-left: 1.875rem; }
+      /* line 91, stdin */
+      ul li em.Fail {
+        color: #dd0087; }
+  /* line 96, stdin */
+  ul ul {
+    margin-left: 10px;
+    margin-left: 0.625rem;
+    margin-right: 10px;
+    margin-right: 0.625rem; }
+
+/* line 103, stdin */
+.mdl-layout__content {
+  background: #eee; }
+
+/* line 106, stdin */
+.mdl-layout__header {
+  box-shadow: none; }
+
+/* line 109, stdin */
+.mdl-layout-title {
+  color: #484848;
+  font-size: 27px;
+  font-size: 1.6875rem; }
+
+/* line 114, stdin */
+.mdl-layout__header-row {
+  padding: 0; }
+  @media all and (min-width: 750px) {
+    /* line 114, stdin */
+    .mdl-layout__header-row {
+      padding: 0 16px 0 72px;
+      padding: 0 1rem 0 4.5rem; } }
+
+/* line 121, stdin */
+.mdl-grid.demo-content {
+  padding-left: 0; }
+  @media all and (min-width: 750px) {
+    /* line 121, stdin */
+    .mdl-grid.demo-content {
+      padding-left: 8px;
+      padding-left: 0.5rem; } }
+
+/* line 129, stdin */
+.mdl-cell--3-col, .mdl-cell--3-col-phone.mdl-cell--3-col-phone {
+  width: 100%; }
+  @media all and (min-width: 750px) {
+    /* line 129, stdin */
+    .mdl-cell--3-col, .mdl-cell--3-col-phone.mdl-cell--3-col-phone {
+      width: calc(25% - 16px); } }
+
+/* line 137, stdin */
+.mdl-cell--12-col {
+  padding: 0; }
+  @media all and (min-width: 750px) {
+    /* line 137, stdin */
+    .mdl-cell--12-col {
+      padding: 8px;
+      padding: 0.5rem; } }
+
+/* line 144, stdin */
+#Quiz {
+  text-align: center;
+  width: calc(100% - $size-gutter); }
+  /* line 147, stdin */
+  #Quiz h4 {
+    text-align: left;
+    color: #404040;
+    padding: 10px;
+    padding: 0.625rem;
+    font-size: 13px;
+    font-size: 0.8125rem; }
+    @media all and (min-width: 750px) {
+      /* line 147, stdin */
+      #Quiz h4 {
+        font-size: 16px;
+        font-size: 1rem; } }
+    /* line 155, stdin */
+    #Quiz h4 em {
+      float: right; }
+  /* line 159, stdin */
+  #Quiz form {
+    font-family: georgia,"times new roman",times,serif;
+    font-size: 16px;
+    font-size: 1rem;
+    margin: 34px auto 0 auto;
+    margin: 2.125rem auto 0 auto;
+    padding: 10px;
+    padding: 0.625rem;
+    display: block;
+    width: 100%;
+    text-align: center; }
+    @media all and (min-width: 750px) {
+      /* line 159, stdin */
+      #Quiz form {
+        display: block;
+        width: auto; } }
+    /* line 172, stdin */
+    #Quiz form h1 {
+      padding: 10px;
+      color: #777;
+      font-size: 21px;
+      font-size: 1.3125rem;
+      margin-bottom: 21px;
+      margin-bottom: 1.3125rem; }
+    /* line 178, stdin */
+    #Quiz form b {
+      display: block;
+      font-weight: normal;
+      margin-top: 10px;
+      font-size: 13px;
+      font-size: 0.8125rem;
+      color: #e44525;
+      opacity: 1;
+      -webkit-transition: .4s opacity;
+              transition: .4s opacity; }
+      /* line 186, stdin */
+      #Quiz form b.invis {
+        opacity: 0; }
+    /* line 190, stdin */
+    #Quiz form input {
+      border: 1px solid #eee;
+      font-size: 16px;
+      font-size: 1rem;
+      padding: 10px;
+      padding: 0.625rem;
+      border-radius: 5px;
+      border-radius: 0.3125rem;
+      box-shadow: inset 0px 1px 3px 0 rgba(0, 0, 0, 0.15); }
+    /* line 197, stdin */
+    #Quiz form #super {
+      font-size: 10px;
+      font-size: 0.625rem;
+      vertical-align: +45%; }
+    /* line 201, stdin */
+    #Quiz form label:nth-of-type(2) {
+      margin-left: 25px;
+      margin-left: 1.5625rem; }
+    /* line 204, stdin */
+    #Quiz form input[type=text] {
+      font-family: georgia,"times new roman",times,serif;
+      text-align: center;
+      width: 65%; }
+      @media all and (min-width: 750px) {
+        /* line 204, stdin */
+        #Quiz form input[type=text] {
+          width: auto; } }
+    /* line 212, stdin */
+    #Quiz form input[type=radio] {
+      margin: 0 10px 0 0;
+      margin: 0 0.625rem 0 0; }
+    /* line 215, stdin */
+    #Quiz form button {
+      border-radius: 4px;
+      border-radius: 0.25rem;
+      color: black;
+      display: block;
+      line-height: 1;
+      padding: 10px 30px;
+      padding: 0.625rem 1.875rem;
+      height: 32px;
+      height: 2rem;
+      -webkit-transition: .4s all;
+              transition: .4s all;
+      border: 0;
+      outline: none;
+      opacity: 1;
+      margin: 10px auto;
+      font-size: 14px;
+      font-size: 0.875rem;
+      background-color: #73b1db; }
+      /* line 229, stdin */
+      #Quiz form button:hover {
+        background-color: #3e93cd; }
+      /* line 232, stdin */
+      #Quiz form button:active {
+        background-color: #2b72a5; }
+    /* line 236, stdin */
+    #Quiz form p {
+      margin: 15px 0;
+      margin: 0.9375rem 0; }
+      /* line 238, stdin */
+      #Quiz form p em {
+        color: gray;
+        margin-right: 10px;
+        margin-right: 0.625rem; }
