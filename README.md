@@ -35,7 +35,7 @@ insert into answers (question_id, answer, is_correct) values (1, 'True', true) r
 insert into answers (question_id, answer, is_correct) values (1, 'False', false) returning *;
 ```
 
-Then, to start the app, run nodemon --harmony --watch app.js entrypoint.js
+Then, to start the app, run `nodemon --harmony --watch app.js entrypoint.js`
 
 Notes
 -----
