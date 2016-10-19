@@ -9,6 +9,7 @@ http://www.enterprisedb.com/products-services-training/pgdownload
 
 1. in PGAdmin, create a user, password, and a database. Take note of these and put them in the dbConnectionString method, which is found in controllers/Util.js.
 2. In PGAdmin, run the following queries in your database.
+```
 CREATE TABLE questions (
   question_id serial primary key NOT NULL,
   question text NOT NULL,
@@ -31,13 +32,14 @@ CREATE TABLE submissions (
 insert into questions (question) values ('Is 1024^2 equal to 1048576 ?') returning *;
 insert into answers (question_id, answer, is_correct) values (1, 'True', true) returning *;
 insert into answers (question_id, answer, is_correct) values (1, 'False', false) returning *;
+```
 
 Then, to start the app, run nodemon --harmony --watch app.js entrypoint.js
 
 Notes
 -----
-Go to the following URL to see the server-rendered react componet (it's a quiz): 
+Go to the following URL to see the server-rendered react component (a sample quiz): 
 http://localhost:3000
 
-Go to the following URL to see the real-time dashboard for the quiz results:
+Go to the following URL to see the real-time dashboard for quiz results:
 http://localhost:3000/overview
